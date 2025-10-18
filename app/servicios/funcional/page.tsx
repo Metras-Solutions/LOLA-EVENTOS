@@ -4,6 +4,7 @@ import { CTAButton } from "@/components/cta-button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Leaf } from "lucide-react"
+import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -16,18 +17,32 @@ export default function FuncionalPage() {
   return (
     <>
       <Header />
-      <Section
-        className="pt-32"
-        eyebrow="Lola Funcional"
-        title="Gastronomía con propósito"
-        description="Propuestas diseñadas para nutrir y aportar bienestar. Coffee breaks, brunchs y cócteles elaborados con ingredientes de calidad, que combinan salud y disfrute en experiencias únicas para personas y empresas."
-        centered
-      >
-        <Badge className="mx-auto bg-accent text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-          <Leaf className="w-4 h-4" />
-          Bienestar y Sabor
-        </Badge>
-      </Section>
+      <div className="relative">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-LuSlbN1eLIfYrgBm3cHwFDw8wRghiZ.png"
+            alt=""
+            width={1200}
+            height={1600}
+            className="absolute bottom-8 left-8 w-full max-w-[450px] h-auto opacity-[0.20] mix-blend-multiply object-contain"
+            priority
+          />
+          {/* </CHANGE> */}
+        </div>
+        {/* </CHANGE> */}
+        <Section
+          className="pt-32 relative z-10"
+          eyebrow="Lola Funcional"
+          title="Gastronomía con propósito"
+          description="Propuestas diseñadas para nutrir y aportar bienestar. Coffee breaks, brunchs y cócteles elaborados con ingredientes de calidad, que combinan salud y disfrute en experiencias únicas para personas y empresas."
+          centered
+        >
+          <Badge className="mx-auto bg-accent text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+            <Leaf className="w-4 h-4" />
+            Bienestar y Sabor
+          </Badge>
+        </Section>
+      </div>
 
       {/* Femme Se Fatal Highlight */}
       <Section className="bg-gradient-to-br from-pink-50 to-purple-50">
@@ -55,7 +70,7 @@ export default function FuncionalPage() {
       </Section>
 
       <Section title="Nuestras Propuestas Funcionales">
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto relative z-10">
           <Card className="rounded-2xl border-emerald-200">
             <CardHeader>
               <CardTitle className="font-serif text-2xl">Cóctel Funcional</CardTitle>
@@ -92,7 +107,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-green-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl">Experiencias Conscientes</CardTitle>
+              <CardTitle className="font-serif text-2xl">Experiencias Inteligentes</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -126,8 +141,18 @@ export default function FuncionalPage() {
         </div>
       </Section>
 
-      <Section className="bg-primary text-primary-foreground py-20 md:py-32">
-        <div className="text-center max-w-3xl mx-auto space-y-8">
+      <Section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funciona%203-GC1D1iGAu3ovUrq0GUD1pIJl5Em0wq.png"
+            alt=""
+            width={1200}
+            height={1600}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-[500px] h-auto max-h-[85%] opacity-[0.10] object-contain"
+          />
+        </div>
+        {/* </CHANGE> */}
+        <div className="text-center max-w-3xl mx-auto space-y-8 relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">Bienestar sin renunciar al sabor</h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Diseñemos juntos una experiencia funcional que nutra y sorprenda.

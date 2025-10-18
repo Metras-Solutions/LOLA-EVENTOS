@@ -118,24 +118,27 @@ export default function QuienesSomosPage() {
                 Nuestra Filosofía
               </div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
-                La comida es cultura, emoción y conexión
+                La buena comida hace la diferencia
               </h2>
               <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Creemos que la comida es mucho más que nutrición: es cultura, es emoción, es conexión. Por eso, cada
-                  plato que preparamos lleva una intención, cada evento que diseñamos cuenta una historia, y cada
-                  experiencia que creamos busca dejar una huella.
+                  En Lola creemos que la buena comida hace la diferencia. Trabajamos con ingredientes de primera
+                  calidad, cuidando cada sabor, textura y presentación, porque cada detalle importa.
                 </p>
                 <p>
-                  Trabajamos con ingredientes frescos, naturales y de calidad, porque sabemos que el sabor auténtico
-                  nace de lo simple y bien hecho. Nos importa tanto el resultado final como el proceso: cuidamos cada
-                  detalle, escuchamos a nuestros clientes y nos adaptamos a sus necesidades.
+                  Pero nuestro trabajo no se detiene en la cocina. Nos dedicamos a crear experiencias completas, donde
+                  cada evento fluye sin preocupaciones, cada plato se disfruta al máximo y cada momento queda en la
+                  memoria de quienes lo viven.
+                </p>
+                <p>
+                  Nuestra misión es simple: entregar comida que celebra, conecta y soluciona, haciendo la vida de
+                  nuestros clientes más fácil y sus eventos más exitosos.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-8 md:p-12">
+          <div className="bg-white rounded-3xl p-8 md:p-12 border-2 border-primary/10">
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="text-center space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium">

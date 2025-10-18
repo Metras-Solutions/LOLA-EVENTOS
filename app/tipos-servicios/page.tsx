@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Section } from "@/components/section"
 import { CTAButton } from "@/components/cta-button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Briefcase, Heart, GraduationCap, Home, PartyPopper, Building2, Coffee, Cake } from "lucide-react"
+import { Briefcase, Heart, GraduationCap, Home, PartyPopper, Building2, Coffee, UtensilsCrossed } from "lucide-react"
 
 const serviceTypes = [
   {
@@ -44,16 +44,35 @@ const serviceTypes = [
     features: ["Opciones dulces y saladas", "Bebidas calientes y frías", "Snacks saludables", "Presentación elegante"],
   },
   {
-    icon: Cake,
-    title: "Repostería & Pastelería",
-    description: "Tortas personalizadas, postres finos y dulces artesanales para cualquier ocasión.",
-    features: ["Tortas de diseño", "Postres individuales", "Mesa dulce completa", "Opciones sin gluten"],
-  },
-  {
     icon: Home,
     title: "Servicio a Domicilio",
     description: "Llevamos la experiencia Lola a tu hogar con servicio completo de catering y montaje.",
     features: ["Entrega puntual", "Montaje incluido", "Vajilla y mantelería", "Servicio de meseros"],
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Repostería y Pastelería",
+    description: "Postres finos y dulces artesanales para cualquier ocasión.",
+    features: ["Postres individuales", "Mesa dulce completa", "Opciones sin gluten"],
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "El Mesón de Lola",
+    description: "Una opción práctica, estética y deliciosa para tus celebraciones.",
+    features: [
+      "Mesa con mantelería y presentación cuidada",
+      "Alimentos fríos listos para disfrutar",
+      "Bocados calientes preparados para servir",
+      "Opción de contratar personal de servicio",
+      "Retiro al día siguiente sin necesidad de lavado",
+      "Cuatro variedades de cóctel disponibles",
+    ],
+    fullDescription: [
+      "Instalamos una mesa con mantelería, presentación cuidada y toda la propuesta de alimentos fríos lista para disfrutar. Los bocados calientes quedan preparados para que los anfitriones los sirvan en el momento que deseen.",
+      "También ofrecemos la opción de contratar personal de servicio, si prefieres una atención más completa.",
+      "Los utensilios y elementos se retiran al día siguiente, sin necesidad de lavado, dejando una garantía previa. Una alternativa conveniente, funcional y elegante, ideal para celebraciones tipo cóctel.",
+      "Contamos con cuatro variedades de cóctel, adaptadas a diferentes estilos y necesidades.",
+    ],
   },
 ]
 
@@ -77,23 +96,51 @@ export default function TiposServiciosPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceTypes.map((service, index) => {
               const Icon = service.icon
+              const isMesonLola = service.title === "El Mesón de Lola"
+
               return (
                 <Card
                   key={index}
-                  className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group"
+                  className={`border-2 transition-all duration-300 hover:shadow-xl group ${
+                    isMesonLola ? "bg-white border-primary/30 hover:border-primary" : "hover:border-primary/50"
+                  }`}
                 >
                   <CardHeader className="space-y-4">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-8 h-8 text-primary" />
+                    <div
+                      className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${
+                        isMesonLola
+                          ? "bg-primary/10 group-hover:bg-primary/20"
+                          : "bg-primary/10 group-hover:bg-primary/20"
+                      }`}
+                    >
+                      <Icon className={`w-8 h-8 ${isMesonLola ? "text-primary" : "text-primary"}`} />
                     </div>
-                    <CardTitle className="font-serif text-2xl text-primary">{service.title}</CardTitle>
-                    <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                    <CardTitle className={`font-serif text-2xl ${isMesonLola ? "text-primary" : "text-primary"}`}>
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className={`text-base leading-relaxed ${isMesonLola ? "text-primary/80" : ""}`}>
+                      {service.description}
+                    </CardDescription>
+                    {isMesonLola && "fullDescription" in service && (
+                      <div className="space-y-3 pt-2">
+                        {service.fullDescription.map((paragraph, idx) => (
+                          <p key={idx} className="text-sm text-primary/80 leading-relaxed">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="text-primary mt-1">•</span>
+                        <li
+                          key={idx}
+                          className={`flex items-start gap-2 text-sm ${
+                            isMesonLola ? "text-primary/80" : "text-muted-foreground"
+                          }`}
+                        >
+                          <span className={isMesonLola ? "text-primary mt-1" : "text-primary mt-1"}>•</span>
                           <span>{feature}</span>
                         </li>
                       ))}

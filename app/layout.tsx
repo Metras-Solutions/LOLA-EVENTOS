@@ -1,20 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import "./globals.css"
 import { Footer } from "@/components/footer"
 import { WhatsAppChatWidget } from "@/components/whatsapp-chat-widget"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
-const inter = Inter({
+const montserratHeading = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["600", "700"],
+  variable: "--font-heading",
   display: "swap",
 })
 
-const playfair = Playfair_Display({
+const montserratBody = Montserrat({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["400", "500"],
+  variable: "--font-body",
   display: "swap",
 })
 
@@ -31,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable} antialiased`}>
+    <html lang="es" className={`${montserratHeading.variable} ${montserratBody.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         <ScrollToTop />
         <main className="flex-1">{children}</main>

@@ -37,11 +37,17 @@
   --sidebar-accent-foreground: oklch(0.25 0.05 155);
   --sidebar-border: oklch(0.78 0.03 65);
   --sidebar-ring: oklch(0.35 0.08 155);
+
+  /* Add sand/beige color variables for Studio Lola branding */
+  --sand: #967762;
+  --sand-2: #e1c5ae;
+  --text: #1a1a1a;
 }
 
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+  /* Update font variables to use Montserrat */
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -85,8 +91,30 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #e1c5ae 0%, #967762 100%);
+    @apply text-foreground;
   }
+
+  /* Apply Montserrat heading font to h1-h3 */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading), system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* Apply Montserrat body font to h4-h6 and paragraphs */
+  h4,
+  h5,
+  h6,
+  p,
+  body {
+    font-family: var(--font-body), system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Add sand gradient utility class */
+.bg-sand-gradient {
+  background: linear-gradient(135deg, var(--sand-2) 0%, var(--sand) 100%);
 }
 
 /* Smooth scrolling */

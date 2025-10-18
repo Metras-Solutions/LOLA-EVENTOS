@@ -35,18 +35,31 @@ export default function EventosPage() {
   return (
     <>
       <Header />
-      <Section
-        className="pt-32"
-        eyebrow="Lola Eventos"
-        title="Celebraciones hechas a la medida"
-        description="Desayunos, coffee breaks, almuerzos, cocteles y cenas para clientes particulares y empresas. Llevamos la excelencia de la buena mesa a cada detalle, con una cocina cuidada, sabrosa y de alta calidad, para que tu evento sea inolvidable."
-        centered
-      >
-        <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-          <Sparkles className="w-4 h-4" />
-          Eventos Memorables
-        </Badge>
-      </Section>
+      <div className="relative">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20eventos-e8wUw9aDGuhffxgvljfjuCaf2W1Rmr.png"
+            alt=""
+            width={1200}
+            height={1600}
+            className="absolute bottom-8 left-8 w-full max-w-[450px] h-auto opacity-[0.20] mix-blend-multiply object-contain"
+            priority
+          />
+          {/* </CHANGE> */}
+        </div>
+        <Section
+          className="pt-32 relative z-10"
+          eyebrow="Lola Eventos"
+          title="Celebraciones hechas a la medida"
+          description="Desayunos, coffee breaks, almuerzos, cocteles y cenas para clientes particulares y empresas. Llevamos la excelencia de la buena mesa a cada detalle, con una cocina cuidada, sabrosa y de alta calidad, para que tu evento sea inolvidable."
+          centered
+        >
+          <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+            <Sparkles className="w-4 h-4" />
+            Eventos Memorables
+          </Badge>
+        </Section>
+      </div>
 
       <Section className="bg-gray-50" title="Nuestros Servicios">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,8 +83,8 @@ export default function EventosPage() {
         </div>
       </Section>
 
-      <Section title="Casos de Éxito" centered>
-        <div className="grid md:grid-cols-3 gap-8">
+      <Section title="Casos de Éxito" centered className="relative overflow-hidden">
+        <div className="grid md:grid-cols-3 gap-8 relative z-10">
           {casos.map((caso) => (
             <Card key={caso.title} className="rounded-2xl overflow-hidden">
               <div className="relative h-48">
@@ -94,8 +107,17 @@ export default function EventosPage() {
         </div>
       </Section>
 
-      <Section className="bg-primary text-primary-foreground py-20 md:py-32">
-        <div className="text-center max-w-3xl mx-auto space-y-8">
+      <Section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20eventos%203-5P38vdO8WO3Gs8GKsrDKt67DJqOxq2.png"
+            alt=""
+            width={1200}
+            height={1600}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-[500px] h-auto max-h-[85%] opacity-[0.15] object-contain"
+          />
+        </div>
+        <div className="text-center max-w-3xl mx-auto space-y-8 relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">¿Listo para tu evento?</h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Conversemos sobre tu celebración y diseñemos juntos una experiencia inolvidable.

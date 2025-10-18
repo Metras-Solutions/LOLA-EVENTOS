@@ -18,7 +18,7 @@ const slides = [
     image: "/hero/gourmet-latte-branding.png",
     title: "Lola Funcional",
     subtitle: "Alimentación Saludable y Bienestar",
-    description: "Nutrición consciente sin sacrificar el sabor",
+    description: "Nutrición enfocada en el bienestar sin sacrificar el sabor",
   },
   {
     image: "/hero/food-photography-studio.png",

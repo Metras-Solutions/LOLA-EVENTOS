@@ -25,7 +25,7 @@ const blogPosts = [
     id: 2,
     title: "Caso de Éxito: Matrimonio Sustentable en Viña del Mar",
     excerpt:
-      "Cómo creamos un banquete de 150 personas con ingredientes locales y cero desperdicio para una pareja eco-consciente.",
+      "Cómo creamos un banquete de 150 personas con ingredientes locales y cero desperdicio para una pareja eco-responsable.",
     category: "Casos de Éxito",
     date: "10 de Marzo, 2024",
     readTime: "8 min",

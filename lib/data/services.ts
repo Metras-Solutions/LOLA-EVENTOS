@@ -97,4 +97,10 @@ export const eventTypes: EventType[] = [
     description: "Catering completo con montaje y ambientación personalizada.",
     category: "fiesta",
   },
+  {
+    id: "meson-lola",
+    title: "El Mesón de Lola",
+    description: "Una opción práctica, estética y deliciosa para tus celebraciones.",
+    category: "fiesta",
+  },
 ]

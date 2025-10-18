@@ -4,6 +4,7 @@ import { CTAButton } from "@/components/cta-button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Lightbulb, Megaphone, Camera, Sparkles } from "lucide-react"
+import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -16,18 +17,32 @@ export default function StudioPage() {
   return (
     <>
       <Header />
-      <Section
-        className="pt-32"
-        eyebrow="Studio Lola"
-        title="La cocina al servicio de las marcas"
-        description="Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia. Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público."
-        centered
-      >
-        <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-          <Lightbulb className="w-4 h-4" />
-          Estrategia + Sabor
-        </Badge>
-      </Section>
+      <div className="relative">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20eventos-e8wUw9aDGuhffxgvljfjuCaf2W1Rmr.png"
+            alt=""
+            width={1200}
+            height={1600}
+            className="absolute top-1/2 right-0 -translate-y-1/2 w-full max-w-[500px] h-auto opacity-[0.06] mix-blend-multiply grayscale object-contain"
+            priority
+          />
+          {/* </CHANGE> */}
+        </div>
+        {/* </CHANGE> */}
+        <Section
+          className="pt-32 relative z-10"
+          eyebrow="Studio Lola"
+          title="La cocina al servicio de las marcas"
+          description="Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia. Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público."
+          centered
+        >
+          <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+            <Lightbulb className="w-4 h-4" />
+            Estrategia + Sabor
+          </Badge>
+        </Section>
+      </div>
 
       <Section className="bg-gradient-to-br from-teal-50 to-cyan-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
