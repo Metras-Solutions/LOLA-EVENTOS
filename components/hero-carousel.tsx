@@ -9,19 +9,20 @@ import Link from "next/link"
 
 const slides = [
   {
-    image: "/hero/lola-kitchen-products.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/studio%20lola-FDNCYIGAwByF7SwJsQuZRkI1ppNCWC.png",
     title: "Studio Lola",
     subtitle: "Marketing Gastronómico Digital",
     description: "Experiencias gastronómicas que marcan la diferencia",
   },
   {
-    image: "/hero/gourmet-latte-branding.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-rdVM4qo0FIzlDKy1D5eaqZBPEam6ig.png",
     title: "Lola Funcional",
     subtitle: "Alimentación Saludable y Bienestar",
     description: "Nutrición enfocada en el bienestar sin sacrificar el sabor",
   },
   {
-    image: "/hero/food-photography-studio.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20eventos-79azcJP7CAyMof401zpGlPWmfT1bv8.png",
     title: "Lola Eventos",
     subtitle: "Catering y Organización de Eventos",
     description: "Creamos experiencias memorables para tu celebración",

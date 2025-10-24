@@ -19,7 +19,7 @@ export default function QuienesSomosPage() {
         <div className="absolute inset-0 bg-[url('/hero/food-flatlay.png')] bg-cover bg-center opacity-20" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center max-w-4xl mx-auto px-4 space-y-4">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg text-balance">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal uppercase text-white drop-shadow-lg text-balance">
               Quiénes Somos
             </h1>
             <p className="text-xl md:text-2xl text-secondary drop-shadow-md leading-relaxed text-pretty">
@@ -37,7 +37,7 @@ export default function QuienesSomosPage() {
                 <Heart className="w-4 h-4" />
                 Nuestra Historia
               </div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+              <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-primary">
                 Pasión por la gastronomía y la comunicación
               </h2>
               <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
@@ -55,7 +55,7 @@ export default function QuienesSomosPage() {
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/hero/team-studio.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pasi%C3%B3n%20por%20la%20gastronom%C3%ADa%20y%20la%20comunicaci%C3%B3n-hrtf8mVYZQj35bMPiAqPTUQwS5Gnih.png"
                 alt="Equipo Studio Lola"
                 fill
                 className="object-cover"
@@ -70,7 +70,7 @@ export default function QuienesSomosPage() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
                   <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-primary">Pasión</h3>
+                <h3 className="font-serif text-xl font-normal uppercase text-primary">Pasión</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Por la gastronomía y el arte de crear experiencias que conectan
                 </p>
@@ -82,7 +82,7 @@ export default function QuienesSomosPage() {
                 <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto">
                   <Users className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-primary">Conexión</h3>
+                <h3 className="font-serif text-xl font-normal uppercase text-primary">Conexión</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Creamos vínculos auténticos a través del sabor y la experiencia
                 </p>
@@ -94,7 +94,7 @@ export default function QuienesSomosPage() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
                   <Lightbulb className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-primary">Innovación</h3>
+                <h3 className="font-serif text-xl font-normal uppercase text-primary">Innovación</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Fusionamos tradición con tendencias actuales y tecnología
                 </p>
@@ -117,7 +117,7 @@ export default function QuienesSomosPage() {
                 <Sparkles className="w-4 h-4" />
                 Nuestra Filosofía
               </div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+              <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-primary">
                 La buena comida hace la diferencia
               </h2>
               <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
@@ -145,7 +145,7 @@ export default function QuienesSomosPage() {
                   <Target className="w-4 h-4" />
                   Nuestro Enfoque Digital
                 </div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">
+                <h2 className="font-serif text-3xl md:text-4xl font-normal uppercase text-primary">
                   Marketing gastronómico con propósito
                 </h2>
               </div>
@@ -166,7 +166,7 @@ export default function QuienesSomosPage() {
                     <Award className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1">20+ años de experiencia</h4>
+                    <h4 className="font-semibold text-primary mb-1 uppercase">20+ años de experiencia</h4>
                     <p className="text-sm text-muted-foreground">En gastronomía y comunicación digital</p>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function QuienesSomosPage() {
                     <Sparkles className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1">Experiencias memorables</h4>
+                    <h4 className="font-semibold text-primary mb-1 uppercase">Experiencias memorables</h4>
                     <p className="text-sm text-muted-foreground">Que conectan y dejan huella</p>
                   </div>
                 </div>

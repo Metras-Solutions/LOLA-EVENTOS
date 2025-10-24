@@ -14,39 +14,35 @@ export default function HomePage() {
 
       <Section className="py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary text-balance">
-            ¿Qué es Lola Eventos?
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-primary text-balance">
+            Tres formas de vivir la experiencia Lola
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-pretty">
-            Somos un equipo de <span className="text-primary font-semibold">chefs profesionales</span> y{" "}
-            <span className="text-primary font-semibold">comunicadoras digitales</span> que fusionamos la gastronomía
-            con la creatividad, el branding y la estrategia digital.
-          </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
-            Creamos <span className="text-accent font-semibold">experiencias gastronómicas memorables</span> que
-            conectan con las personas a través del sabor, la estética y la emoción. Cada proyecto es una oportunidad
-            para contar historias únicas que dejan huella.
+            Somos un equipo de <span className="font-bold">chefs profesionales</span> y{" "}
+            <span className="font-bold">comunicadoras digitales</span> que transforman la gastronomía en experiencias
+            únicas. Diseñamos <span className="font-bold">eventos, menús y proyectos gastronómicos</span> que sorprenden
+            y conectan con las personas.
           </p>
           <div className="grid md:grid-cols-3 gap-8 pt-8">
             <div className="space-y-3">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary">Pasión</h3>
+              <h3 className="font-serif text-xl font-normal uppercase text-primary">Pasión</h3>
               <p className="text-muted-foreground">Por la gastronomía y el arte de crear experiencias</p>
             </div>
             <div className="space-y-3">
               <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto">
                 <Users className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary">Conexión</h3>
+              <h3 className="font-serif text-xl font-normal uppercase text-primary">Conexión</h3>
               <p className="text-muted-foreground">Creamos vínculos auténticos a través del sabor</p>
             </div>
             <div className="space-y-3">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
                 <Lightbulb className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary">Innovación</h3>
+              <h3 className="font-serif text-xl font-normal uppercase text-primary">Innovación</h3>
               <p className="text-muted-foreground">Fusionamos tradición con tendencias actuales</p>
             </div>
           </div>
@@ -56,7 +52,7 @@ export default function HomePage() {
       <Section className="py-20 md:py-32 bg-white">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-balance">
+            <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-primary text-balance">
               Tres propuestas, una misma esencia
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
@@ -82,7 +78,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Utensils className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="font-serif text-2xl text-primary">Lola Eventos</CardTitle>
+                <CardTitle className="font-serif text-2xl text-primary uppercase font-normal">Lola Eventos</CardTitle>
                 <CardDescription className="text-base leading-relaxed text-primary/80">
                   Catering y organización de eventos corporativos, matrimonios y celebraciones. Creamos experiencias
                   gastronómicas que van más allá de lo tradicional.
@@ -115,7 +111,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center group-hover:bg-white/50 transition-colors">
                   <Leaf className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="font-serif text-2xl text-primary">Lola Funcional</CardTitle>
+                <CardTitle className="font-serif text-2xl text-primary uppercase font-normal">Lola Funcional</CardTitle>
                 <CardDescription className="text-base leading-relaxed text-primary/80">
                   Alimentación saludable y bienestar. Nutrición funcional enfocada en el bienestar que no sacrifica el
                   sabor ni la experiencia gastronómica.
@@ -137,7 +133,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 rounded-2xl bg-secondary/30 flex items-center justify-center group-hover:bg-secondary/40 transition-colors">
                   <Sparkles className="w-8 h-8 text-secondary" />
                 </div>
-                <CardTitle className="font-serif text-2xl text-primary">Studio Lola</CardTitle>
+                <CardTitle className="font-serif text-2xl text-primary uppercase font-normal">Studio Lola</CardTitle>
                 <CardDescription className="text-base leading-relaxed text-primary/80">
                   Marketing gastronómico digital. Branding culinario, fotografía de alimentos, contenido para redes
                   sociales y estrategia digital.
@@ -181,7 +177,7 @@ export default function HomePage() {
               <Utensils className="w-10 h-10 text-primary" />
             </div>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight text-primary px-4">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-balance leading-tight text-primary px-4">
             Si tu evento no se comenta al día siguiente,{" "}
             <span className="relative inline-block">
               <span className="relative z-10">no era un evento de Lola.</span>
@@ -202,7 +198,7 @@ export default function HomePage() {
               <Sparkles className="w-6 h-6 text-white" />
               <span className="font-serif text-xl font-bold text-white">Studio Lola</span>
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-balance">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-balance">
               Creatividad gastronómica con visión estratégica
             </h2>
           </div>
@@ -242,7 +238,7 @@ export default function HomePage() {
       <Section className="py-20 md:py-32 bg-white">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary text-balance">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-primary text-balance">
               Lo que dicen nuestros clientes
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
@@ -257,7 +253,9 @@ export default function HomePage() {
       {/* CTA Section */}
       <Section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="text-center max-w-3xl mx-auto space-y-8">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">Conversemos tu próximo proyecto</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
+            Conversemos tu próximo proyecto
+          </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Estamos listos para crear una experiencia gastronómica única que conecte con tu audiencia y marque la
             diferencia.

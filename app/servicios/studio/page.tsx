@@ -4,6 +4,7 @@ import { CTAButton } from "@/components/cta-button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Lightbulb, Megaphone, Camera, Sparkles } from "lucide-react"
+import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -16,22 +17,36 @@ export default function StudioPage() {
   return (
     <>
       <Header />
-      <Section
-        className="pt-32"
-        eyebrow="Studio Lola"
-        title="La cocina al servicio de las marcas"
-        description="Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia. Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público."
-        centered
-      >
-        <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-          <Lightbulb className="w-4 h-4" />
-          Estrategia + Sabor
-        </Badge>
-      </Section>
+      <div className="relative">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/studio%20lola-zbMgLg0sMdajesHxCT0wMwufzqcptO.png"
+            alt=""
+            fill
+            className="object-cover opacity-40"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </div>
+        <Section
+          className="pt-32 relative z-10"
+          eyebrow="Studio Lola"
+          title="LA COCINA AL SERVICIO DE LAS MARCAS"
+          description="Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia. Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público."
+          centered
+        >
+          <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+            <Lightbulb className="w-4 h-4" />
+            Estrategia + Sabor
+          </Badge>
+        </Section>
+      </div>
 
       <Section className="bg-gradient-to-br from-teal-50 to-cyan-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-teal-900">Tu marca necesita más que recetas</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-normal uppercase text-teal-900">
+            Tu marca necesita más que recetas
+          </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Necesita relato, estrategia y sabor propio. En Studio Lola, fusionamos cocina con branding, marketing
             digital y producción de contenidos gastronómicos para crear experiencias que marcan la diferencia.
@@ -53,12 +68,14 @@ export default function StudioPage() {
         </div>
       </Section>
 
-      <Section title="Servicios para Marcas">
+      <Section title="SERVICIOS PARA MARCAS">
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
               <Sparkles className="w-10 h-10 text-teal-600 mb-2" />
-              <CardTitle className="font-serif text-2xl">Experiencias Comestibles Estratégicas</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">
+                Experiencias Comestibles Estratégicas
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -76,7 +93,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-cyan-200">
             <CardHeader>
               <Megaphone className="w-10 h-10 text-cyan-600 mb-2" />
-              <CardTitle className="font-serif text-2xl">Campañas Gastronómicas</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Campañas Gastronómicas</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -94,7 +111,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
               <Camera className="w-10 h-10 text-teal-600 mb-2" />
-              <CardTitle className="font-serif text-2xl">Producción de Contenido</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Producción de Contenido</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -112,7 +129,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-cyan-200">
             <CardHeader>
               <Lightbulb className="w-10 h-10 text-cyan-600 mb-2" />
-              <CardTitle className="font-serif text-2xl">Storytelling de Marca</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Storytelling de Marca</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -131,7 +148,9 @@ export default function StudioPage() {
 
       <Section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="text-center max-w-3xl mx-auto space-y-8">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">¿Lista tu marca para destacar?</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
+            ¿Lista tu marca para destacar?
+          </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Conversemos sobre cómo la gastronomía puede potenciar tu estrategia de marca.
           </p>

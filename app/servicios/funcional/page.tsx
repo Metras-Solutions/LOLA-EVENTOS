@@ -18,22 +18,20 @@ export default function FuncionalPage() {
     <>
       <Header />
       <div className="relative">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-LuSlbN1eLIfYrgBm3cHwFDw8wRghiZ.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-oJE6j1Jrb6mRTxiX3ft7Osp6tpNKDl.png"
             alt=""
-            width={1200}
-            height={1600}
-            className="absolute bottom-8 left-8 w-full max-w-[450px] h-auto opacity-[0.20] mix-blend-multiply object-contain"
+            fill
+            className="object-cover opacity-40"
             priority
           />
-          {/* </CHANGE> */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
-        {/* </CHANGE> */}
         <Section
           className="pt-32 relative z-10"
           eyebrow="Lola Funcional"
-          title="Gastronomía con propósito"
+          title="GASTRONOMÍA CON PROPÓSITO"
           description="Propuestas diseñadas para nutrir y aportar bienestar. Coffee breaks, brunchs y cócteles elaborados con ingredientes de calidad, que combinan salud y disfrute en experiencias únicas para personas y empresas."
           centered
         >
@@ -44,11 +42,12 @@ export default function FuncionalPage() {
         </Section>
       </div>
 
-      {/* Femme Se Fatal Highlight */}
       <Section className="bg-gradient-to-br from-pink-50 to-purple-50">
         <Card className="max-w-4xl mx-auto rounded-2xl border-2 border-pink-300">
           <CardHeader>
-            <CardTitle className="font-serif text-3xl text-center text-pink-900">Femme Se Fatal</CardTitle>
+            <CardTitle className="font-serif text-3xl text-center text-pink-900 uppercase font-normal">
+              Femme Se Fatal
+            </CardTitle>
             <p className="text-center text-pink-700 font-semibold">Eventos corporativos diseñados para mujeres</p>
           </CardHeader>
           <CardContent className="space-y-4 text-gray-700 leading-relaxed">
@@ -69,11 +68,11 @@ export default function FuncionalPage() {
         </Card>
       </Section>
 
-      <Section title="Nuestras Propuestas Funcionales">
+      <Section title="NUESTRAS PROPUESTAS FUNCIONALES">
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto relative z-10">
           <Card className="rounded-2xl border-emerald-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl">Cóctel Funcional</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Cóctel Funcional</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -90,7 +89,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl">El Buen Desorden</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">El Buen Desorden</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -107,7 +106,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-green-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl">Experiencias Inteligentes</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Experiencias Inteligentes</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -124,7 +123,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-lime-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl">Coffee Breaks Saludables</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">Coffee Breaks Saludables</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -142,18 +141,10 @@ export default function FuncionalPage() {
       </Section>
 
       <Section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funciona%203-GC1D1iGAu3ovUrq0GUD1pIJl5Em0wq.png"
-            alt=""
-            width={1200}
-            height={1600}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-[500px] h-auto max-h-[85%] opacity-[0.10] object-contain"
-          />
-        </div>
-        {/* </CHANGE> */}
         <div className="text-center max-w-3xl mx-auto space-y-8 relative z-10">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">Bienestar sin renunciar al sabor</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
+            Bienestar sin renunciar al sabor
+          </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Diseñemos juntos una experiencia funcional que nutra y sorprenda.
           </p>
