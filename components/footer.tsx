@@ -8,13 +8,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <div className="font-serif text-2xl font-bold text-secondary mb-4">Studio Lola</div>
+            <div className="font-serif text-2xl font-normal text-secondary mb-4">Studio Lola</div>
             <p className="text-sm leading-relaxed">Experiencias gastronómicas que marcan la diferencia.</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-secondary mb-4">Enlaces</h3>
+            <h3 className="font-normal text-secondary mb-4">Enlaces</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/quienes-somos" className="hover:text-secondary transition-colors">
@@ -46,7 +46,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-secondary mb-4">Contacto</h3>
+            <h3 className="font-normal text-secondary mb-4">Contacto</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -69,7 +69,7 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-semibold text-secondary mb-4">Síguenos</h3>
+            <h3 className="font-normal text-secondary mb-4">Síguenos</h3>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com"

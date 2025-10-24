@@ -34,7 +34,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
-            <div className="font-serif text-2xl font-bold text-primary">STUDIO LOLA</div>
+            <div className="font-serif text-2xl font-normal text-primary">STUDIO LOLA</div>
           </Link>
 
           {/* Desktop Navigation */}

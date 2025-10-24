@@ -67,7 +67,7 @@ export function HeroCarousel() {
       <nav className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/30 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link href="/" className="font-serif text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
+            <Link href="/" className="font-serif text-2xl md:text-3xl font-normal text-white drop-shadow-lg">
               STUDIO LOLA
             </Link>
 
@@ -133,7 +133,7 @@ export function HeroCarousel() {
           <div className="absolute inset-0 flex items-center justify-center bg-black/20">
             <div className="text-center max-w-5xl mx-auto px-4 py-20">
               <div className="space-y-4">
-                <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white drop-shadow-2xl text-balance">
+                <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-white drop-shadow-2xl text-balance">
                   {slide.title}
                 </h2>
                 <p className="text-2xl md:text-3xl text-secondary drop-shadow-lg font-light text-balance">
