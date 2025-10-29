@@ -20,14 +20,15 @@ export default function StudioPage() {
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/studio%20lola-zbMgLg0sMdajesHxCT0wMwufzqcptO.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lolastudio-E048eBYowODJu0s4iGP0dTJdsPjpIW.png"
             alt=""
             fill
-            className="object-cover opacity-40"
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
+        {/* </CHANGE> */}
         <Section
           className="pt-32 relative z-10"
           eyebrow="Studio Lola"

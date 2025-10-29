@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export function WhatsAppChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [autoCloseTimer, setAutoCloseTimer] = useState<NodeJS.Timeout | null>(null)
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+56900000000"
+  const whatsappNumber = "+56994182013"
 
   // Auto-close after 10 seconds of no interaction
   useEffect(() => {

@@ -20,14 +20,15 @@ export default function FuncionalPage() {
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-oJE6j1Jrb6mRTxiX3ft7Osp6tpNKDl.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lolafuncional-EYdQHKh033842LOLAmP1FdIMMWaK0F.png"
             alt=""
             fill
-            className="object-cover opacity-40"
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
+        {/* </CHANGE> */}
         <Section
           className="pt-32 relative z-10"
           eyebrow="Lola Funcional"

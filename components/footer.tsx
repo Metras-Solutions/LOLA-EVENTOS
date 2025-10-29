@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -50,16 +50,22 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:contacto@lola.cl" className="hover:text-secondary transition-colors">
-                  contacto@lola.cl
+                <a href="mailto:lola.eventoschile@gmail.com" className="hover:text-secondary transition-colors">
+                  lola.eventoschile@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="tel:+56900000000" className="hover:text-secondary transition-colors">
-                  +56 9 0000 0000
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+56994182013" className="hover:text-secondary transition-colors">
+                    +56 9 9418 2013
+                  </a>
+                  <a href="tel:+56988071823" className="hover:text-secondary transition-colors">
+                    +56 9 8807 1823
+                  </a>
+                </div>
               </li>
+              {/* </CHANGE> */}
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>Santiago, Chile</span>
@@ -72,7 +78,7 @@ export function Footer() {
             <h3 className="font-normal text-secondary mb-4">Síguenos</h3>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/lolaeventos.chile?igsh=MnkxMTI2dTFsaHY="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-secondary transition-colors"
@@ -80,25 +86,8 @@ export function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
             </div>
+            {/* </CHANGE> */}
           </div>
         </div>
 
