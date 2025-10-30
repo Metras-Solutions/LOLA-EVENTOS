@@ -82,8 +82,8 @@ export default function TiposServiciosPage() {
       <Header />
       <Section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-secondary/30 to-background">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary text-balance">
-            Tipos de Servicios
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal uppercase text-primary text-balance">
+            TIPOS DE SERVICIOS
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-pretty">
             Ofrecemos una amplia variedad de servicios gastronómicos adaptados a cada tipo de evento y celebración.
@@ -115,7 +115,9 @@ export default function TiposServiciosPage() {
                     >
                       <Icon className={`w-8 h-8 ${isMesonLola ? "text-primary" : "text-primary"}`} />
                     </div>
-                    <CardTitle className={`font-serif text-2xl ${isMesonLola ? "text-primary" : "text-primary"}`}>
+                    <CardTitle
+                      className={`font-serif text-2xl font-normal uppercase ${isMesonLola ? "text-primary" : "text-primary"}`}
+                    >
                       {service.title}
                     </CardTitle>
                     <CardDescription className={`text-base leading-relaxed ${isMesonLola ? "text-primary/80" : ""}`}>
@@ -155,7 +157,9 @@ export default function TiposServiciosPage() {
 
       <Section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="text-center max-w-3xl mx-auto space-y-8">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">¿Listo para planificar tu evento?</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
+            ¿LISTO PARA PLANIFICAR TU EVENTO?
+          </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Contáctanos y conversemos sobre cómo podemos hacer de tu evento una experiencia gastronómica inolvidable.
           </p>

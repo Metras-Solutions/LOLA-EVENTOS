@@ -14,13 +14,21 @@ export default function ServiciosPage() {
   return (
     <>
       <Header />
-      <Section
-        className="pt-32"
-        eyebrow="Servicios"
-        title="Tres líneas, un mismo compromiso"
-        description="Cada propuesta nace de nuestra pasión por la gastronomía y la comunicación. Todas comparten el mismo ADN: calidad, creatividad y atención personalizada. Lo que cambia es el enfoque y el propósito de cada experiencia."
-        centered
-      >
+      <Section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-secondary/30 to-background">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <p className="text-sm uppercase tracking-wider text-primary font-medium">Servicios</p>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal uppercase text-primary text-balance">
+            TRES LÍNEAS, UN MISMO COMPROMISO
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-pretty">
+            Cada propuesta nace de nuestra pasión por la gastronomía y la comunicación. Todas comparten el mismo ADN:
+            calidad, creatividad y atención personalizada. Lo que cambia es el enfoque y el propósito de cada
+            experiencia.
+          </p>
+        </div>
+      </Section>
+
+      <Section className="py-16">
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {mainServices.map((service) => (
             <ServiceCard

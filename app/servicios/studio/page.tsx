@@ -20,33 +20,42 @@ export default function StudioPage() {
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lolastudio-E048eBYowODJu0s4iGP0dTJdsPjpIW.png"
-            alt=""
+            src="/images/lola-studio-hero-2.png"
+            alt="Studio Lola - Professional coffee photography"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
-        {/* </CHANGE> */}
-        <Section
-          className="pt-32 relative z-10"
-          eyebrow="Studio Lola"
-          title="LA COCINA AL SERVICIO DE LAS MARCAS"
-          description="Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia. Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público."
-          centered
-        >
-          <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-            <Lightbulb className="w-4 h-4" />
-            Estrategia + Sabor
-          </Badge>
-        </Section>
+        <div className="pt-32 pb-20 md:pt-40 md:pb-32 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">Studio Lola</p>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-primary text-balance">
+                LA COCINA AL SERVICIO DE LAS MARCAS
+              </h1>
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Creamos experiencias comestibles, campañas y activaciones donde el sabor se convierte en estrategia.
+                </p>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Una fusión entre gastronomía, creatividad y comunicación que conecta con tu público.
+                </p>
+              </div>
+              <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+                <Lightbulb className="w-4 h-4" />
+                Estrategia + Sabor
+              </Badge>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Section className="bg-gradient-to-br from-teal-50 to-cyan-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="font-serif text-3xl md:text-4xl font-normal uppercase text-teal-900">
-            Tu marca necesita más que recetas
+            TU MARCA NECESITA MÁS QUE RECETAS
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Necesita relato, estrategia y sabor propio. En Studio Lola, fusionamos cocina con branding, marketing
@@ -54,28 +63,28 @@ export default function StudioPage() {
           </p>
           <div className="grid md:grid-cols-3 gap-4 pt-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-teal-700">20+</div>
+              <div className="text-4xl font-normal text-teal-700">20+</div>
               <div className="text-sm text-gray-600">Años de experiencia</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-teal-700">100+</div>
+              <div className="text-4xl font-normal text-teal-700">100+</div>
               <div className="text-sm text-gray-600">Campañas creadas</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-teal-700">50+</div>
+              <div className="text-4xl font-normal text-teal-700">50+</div>
               <div className="text-sm text-gray-600">Marcas atendidas</div>
             </div>
           </div>
         </div>
       </Section>
 
-      <Section title="SERVICIOS PARA MARCAS">
+      <Section title={<span className="text-primary">SERVICIOS PARA MARCAS</span>}>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
               <Sparkles className="w-10 h-10 text-teal-600 mb-2" />
               <CardTitle className="font-serif text-2xl uppercase font-normal">
-                Experiencias Comestibles Estratégicas
+                EXPERIENCIAS COMESTIBLES ESTRATÉGICAS
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
@@ -94,7 +103,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-cyan-200">
             <CardHeader>
               <Megaphone className="w-10 h-10 text-cyan-600 mb-2" />
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Campañas Gastronómicas</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">CAMPAÑAS GASTRONÓMICAS</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -112,7 +121,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
               <Camera className="w-10 h-10 text-teal-600 mb-2" />
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Producción de Contenido</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">PRODUCCIÓN DE CONTENIDO</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -130,7 +139,7 @@ export default function StudioPage() {
           <Card className="rounded-2xl border-cyan-200">
             <CardHeader>
               <Lightbulb className="w-10 h-10 text-cyan-600 mb-2" />
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Storytelling de Marca</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">STORYTELLING DE MARCA</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -150,7 +159,7 @@ export default function StudioPage() {
       <Section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="text-center max-w-3xl mx-auto space-y-8">
           <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
-            ¿Lista tu marca para destacar?
+            ¿LISTA TU MARCA PARA DESTACAR?
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Conversemos sobre cómo la gastronomía puede potenciar tu estrategia de marca.

@@ -38,42 +38,52 @@ export default function EventosPage() {
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Lolaeventos-xr8QjUyIn5z9OR1nFTVjOL4jZujs52.png"
-            alt=""
+            src="/images/lola-eventos-hero.png"
+            alt="Lola Eventos - Elegant table setting"
             fill
             className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
-        {/* </CHANGE> */}
-        <Section
-          className="pt-32 relative z-10"
-          eyebrow="Lola Eventos"
-          title="CELEBRACIONES HECHAS A LA MEDIDA"
-          description="Desayunos, coffee breaks, almuerzos, cocteles y cenas para clientes particulares y empresas. Llevamos la excelencia de la buena mesa a cada detalle, con una cocina cuidada, sabrosa y de alta calidad, para que tu evento sea inolvidable."
-          centered
-        >
-          <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-            <Sparkles className="w-4 h-4" />
-            Eventos Memorables
-          </Badge>
-        </Section>
+        <div className="pt-32 pb-20 md:pt-40 md:pb-32 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">Lola Eventos</p>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-primary text-balance">
+                CELEBRACIONES HECHAS A LA MEDIDA
+              </h1>
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Desayunos, coffee breaks, almuerzos, cocteles y cenas para clientes particulares y empresas.
+                </p>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Llevamos la excelencia de la buena mesa a cada detalle, con una cocina cuidada, sabrosa y de alta
+                  calidad, para que tu evento sea inolvidable.
+                </p>
+              </div>
+              <Badge className="mx-auto bg-primary text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+                <Sparkles className="w-4 h-4" />
+                Eventos Memorables
+              </Badge>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <Section className="bg-gray-50" title="NUESTROS SERVICIOS">
+      <Section className="bg-gray-50" title={<span className="text-primary">NUESTROS SERVICIOS</span>}>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { title: "Matrimonios", desc: "Banquetes elegantes con menús personalizados" },
-            { title: "Aniversarios", desc: "Celebraciones íntimas o grandes fiestas" },
-            { title: "Cenas Corporativas", desc: "Eventos ejecutivos con servicio impecable" },
-            { title: "Desayunos y Brunch", desc: "Opciones frescas y deliciosas para comenzar el día" },
-            { title: "Coffee Breaks", desc: "Pausas energizantes para reuniones y conferencias" },
-            { title: "Cócteles", desc: "Experiencias gastronómicas de pie con variedad de bocados" },
+            { title: "MATRIMONIOS", desc: "Banquetes elegantes con menús personalizados" },
+            { title: "ANIVERSARIOS", desc: "Celebraciones íntimas o grandes fiestas" },
+            { title: "CENAS CORPORATIVAS", desc: "Eventos ejecutivos con servicio impecable" },
+            { title: "DESAYUNOS Y BRUNCH", desc: "Opciones frescas y deliciosas para comenzar el día" },
+            { title: "COFFEE BREAKS", desc: "Pausas energizantes para reuniones y conferencias" },
+            { title: "CÓCTELES", desc: "Experiencias gastronómicas de pie con variedad de bocados" },
           ].map((item) => (
             <Card key={item.title} className="rounded-2xl border-brand-200">
               <CardHeader>
-                <CardTitle className="text-xl font-normal">{item.title}</CardTitle>
+                <CardTitle className="font-serif text-xl font-normal uppercase">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">{item.desc}</p>
@@ -83,7 +93,11 @@ export default function EventosPage() {
         </div>
       </Section>
 
-      <Section title="CASOS DE ÉXITO" centered className="relative overflow-hidden">
+      <Section
+        title={<span className="text-primary">CASOS DE ÉXITO</span>}
+        centered
+        className="relative overflow-hidden"
+      >
         <div className="grid md:grid-cols-3 gap-8 relative z-10">
           {casos.map((caso) => (
             <Card key={caso.title} className="rounded-2xl overflow-hidden">
@@ -97,7 +111,7 @@ export default function EventosPage() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl font-normal">{caso.title}</CardTitle>
+                <CardTitle className="font-serif text-xl font-normal uppercase">{caso.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">{caso.description}</p>
@@ -109,7 +123,7 @@ export default function EventosPage() {
 
       <Section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="text-center max-w-3xl mx-auto space-y-8 relative z-10">
-          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">¿Listo para tu evento?</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">¿LISTO PARA TU EVENTO?</h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Conversemos sobre tu celebración y diseñemos juntos una experiencia inolvidable.
           </p>

@@ -25,7 +25,9 @@ export function ServiceCard({ title, description, link, color, badge }: ServiceC
               {badge}
             </Badge>
           )}
-          <CardTitle className="font-serif text-2xl group-hover:text-brand-700 transition-colors">{title}</CardTitle>
+          <CardTitle className="font-serif text-2xl font-normal uppercase group-hover:text-brand-700 transition-colors">
+            {title}
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription className="text-base leading-relaxed mb-4">{description}</CardDescription>

@@ -20,36 +20,46 @@ export default function FuncionalPage() {
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lolafuncional-EYdQHKh033842LOLAmP1FdIMMWaK0F.png"
-            alt=""
+            src="/images/lola-funcional-hero.png"
+            alt="Lola Funcional - Healthy food options"
             fill
             className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
-        {/* </CHANGE> */}
-        <Section
-          className="pt-32 relative z-10"
-          eyebrow="Lola Funcional"
-          title="GASTRONOMÍA CON PROPÓSITO"
-          description="Propuestas diseñadas para nutrir y aportar bienestar. Coffee breaks, brunchs y cócteles elaborados con ingredientes de calidad, que combinan salud y disfrute en experiencias únicas para personas y empresas."
-          centered
-        >
-          <Badge className="mx-auto bg-accent text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
-            <Leaf className="w-4 h-4" />
-            Bienestar y Sabor
-          </Badge>
-        </Section>
+        <div className="pt-32 pb-20 md:pt-40 md:pb-32 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">Lola Funcional</p>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-primary text-balance">
+                GASTRONOMÍA CON PROPÓSITO
+              </h1>
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Propuestas diseñadas para nutrir y aportar bienestar.
+                </p>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Coffee breaks, brunchs y cócteles elaborados con ingredientes de calidad, que combinan salud y
+                  disfrute en experiencias únicas para personas y empresas.
+                </p>
+              </div>
+              <Badge className="mx-auto bg-accent text-primary-foreground text-base px-6 py-2 flex items-center gap-2 w-fit">
+                <Leaf className="w-4 h-4" />
+                Bienestar y Sabor
+              </Badge>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Section className="bg-gradient-to-br from-pink-50 to-purple-50">
         <Card className="max-w-4xl mx-auto rounded-2xl border-2 border-pink-300">
           <CardHeader>
             <CardTitle className="font-serif text-3xl text-center text-pink-900 uppercase font-normal">
-              Femme Se Fatal
+              FEMME SE FATAL
             </CardTitle>
-            <p className="text-center text-pink-700 font-semibold">Eventos corporativos diseñados para mujeres</p>
+            <p className="text-center text-pink-700 font-medium">Eventos corporativos diseñados para mujeres</p>
           </CardHeader>
           <CardContent className="space-y-4 text-gray-700 leading-relaxed">
             <p>
@@ -69,11 +79,11 @@ export default function FuncionalPage() {
         </Card>
       </Section>
 
-      <Section title="NUESTRAS PROPUESTAS FUNCIONALES">
+      <Section title={<span className="text-primary">NUESTRAS PROPUESTAS FUNCIONALES</span>}>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto relative z-10">
           <Card className="rounded-2xl border-emerald-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Cóctel Funcional</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">CÓCTEL FUNCIONAL</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -90,7 +100,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-teal-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl uppercase font-normal">El Buen Desorden</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">EL BUEN DESORDEN</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -107,7 +117,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-green-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Experiencias Inteligentes</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">EXPERIENCIAS INTELIGENTES</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -124,7 +134,7 @@ export default function FuncionalPage() {
 
           <Card className="rounded-2xl border-lime-200">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl uppercase font-normal">Coffee Breaks Saludables</CardTitle>
+              <CardTitle className="font-serif text-2xl uppercase font-normal">COFFEE BREAKS SALUDABLES</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-700">
               <p>
@@ -144,7 +154,7 @@ export default function FuncionalPage() {
       <Section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="text-center max-w-3xl mx-auto space-y-8 relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">
-            Bienestar sin renunciar al sabor
+            BIENESTAR SIN RENUNCIAR AL SABOR
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Diseñemos juntos una experiencia funcional que nutra y sorprenda.

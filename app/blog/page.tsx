@@ -89,7 +89,9 @@ export default function BlogPage() {
       <Header />
       <Section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-secondary/30 to-background">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary text-balance">Blog Lola</h1>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal uppercase text-primary text-balance">
+            BLOG LOLA
+          </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-pretty">
             Artículos sobre cocina funcional, casos de éxito de nuestros eventos, y tips de bienestar para una vida más
             saludable.
@@ -138,7 +140,7 @@ export default function BlogPage() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <CardTitle className="font-serif text-xl text-primary group-hover:text-accent transition-colors">
+                  <CardTitle className="font-serif text-xl font-normal uppercase text-primary group-hover:text-accent transition-colors">
                     {post.title}
                   </CardTitle>
                   <CardDescription className="text-base leading-relaxed">{post.excerpt}</CardDescription>
@@ -161,7 +163,7 @@ export default function BlogPage() {
 
       <Section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="text-center max-w-3xl mx-auto space-y-8">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">¿Quieres estar al día?</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-normal uppercase text-balance">¿QUIERES ESTAR AL DÍA?</h2>
           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 text-pretty">
             Síguenos en redes sociales para más contenido sobre cocina funcional, eventos y bienestar.
           </p>
