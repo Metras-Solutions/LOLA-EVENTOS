@@ -34,8 +34,8 @@ export default function ContactoPage() {
                   <Mail className="w-5 h-5 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-gray-900">Email</div>
-                    <a href="mailto:contacto@lola.cl" className="text-gray-600 hover:text-brand-600">
-                      contacto@lola.cl
+                    <a href="mailto:lola.eventoschile@gmail.com" className="text-gray-600 hover:text-brand-600">
+                      lola.eventoschile@gmail.com
                     </a>
                   </div>
                 </div>
@@ -44,18 +44,23 @@ export default function ContactoPage() {
                   <Phone className="w-5 h-5 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-gray-900">Teléfono</div>
-                    <a href="tel:+56900000000" className="text-gray-600 hover:text-brand-600">
-                      +56 9 0000 0000
-                    </a>
+                    <div className="space-y-1">
+                      <a href="tel:+56994182013" className="text-gray-600 hover:text-brand-600 block">
+                        +56 9 9418 2013
+                      </a>
+                      <a href="tel:+56988071823" className="text-gray-600 hover:text-brand-600 block">
+                        +56 9 8807 1823
+                      </a>
+                    </div>
                   </div>
                 </div>
-
+                
                 <div className="flex items-start gap-3">
                   <MessageCircle className="w-5 h-5 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-gray-900">WhatsApp</div>
                     <a
-                      href={`https://wa.me/${whatsappNumber.replace(/\+/g, "")}`}
+                      href="https://wa.me/56994182013"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-brand-600"
