@@ -26,7 +26,7 @@ export default function FuncionalPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/100 via-background/100 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/0 to-background" />
         </div>
         {/* </CHANGE> */}
         <Section
