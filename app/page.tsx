@@ -6,10 +6,42 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Utensils, Leaf, Sparkles, Heart, Users, Lightbulb } from "lucide-react"
 import { testimonials } from "@/lib/data/testimonials"
 import Image from "next/image"
+import Script from "next/script"
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Studio Lola",
+    alternateName: "Lola Eventos",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://lola-eventos.vercel.app",
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://lola-eventos.vercel.app"}/images/lola-logo.png`,
+    description:
+      "Eventos, gastronomía funcional y experiencias comestibles estratégicas. Chefs y comunicadoras digitales con más de 20 años de experiencia.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "CL",
+      addressLocality: "Chile",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+56-9-9418-2013",
+      contactType: "customer service",
+      email: "lola.eventoschile@gmail.com",
+      availableLanguage: ["Spanish"],
+    },
+    sameAs: ["https://www.instagram.com/lolaeventos.chile"],
+  }
+
   return (
     <>
+      {/* SEO: JSON-LD structured data */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <HeroCarousel />
 
       <Section className="py-20 md:py-32">

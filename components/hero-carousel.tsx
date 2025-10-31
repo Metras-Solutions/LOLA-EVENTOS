@@ -9,21 +9,20 @@ import Link from "next/link"
 
 const slides = [
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/studio%20lola-FDNCYIGAwByF7SwJsQuZRkI1ppNCWC.png",
-    title: "Studio Lola",
+    image: "/images/hero-studio-lola.png",
+    title: "STUDIO LOLA",
     subtitle: "Marketing Gastronómico Digital",
     description: "Experiencias gastronómicas que marcan la diferencia",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20funcional-rdVM4qo0FIzlDKy1D5eaqZBPEam6ig.png",
-    title: "Lola Funcional",
+    image: "/images/hero-lola-funcional.png",
+    title: "LOLA FUNCIONAL",
     subtitle: "Alimentación Saludable y Bienestar",
     description: "Nutrición enfocada en el bienestar sin sacrificar el sabor",
   },
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lola%20eventos-79azcJP7CAyMof401zpGlPWmfT1bv8.png",
-    title: "Lola Eventos",
+    image: "/images/hero-lola-eventos.png",
+    title: "LOLA EVENTOS",
     subtitle: "Catering y Organización de Eventos",
     description: "Creamos experiencias memorables para tu celebración",
   },
@@ -64,7 +63,11 @@ export function HeroCarousel() {
 
   return (
     <div className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
-      <nav className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/30 to-transparent">
+      {/* SEO: Semantic navigation with proper ARIA labels */}
+      <nav
+        className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/30 to-transparent"
+        aria-label="Navegación principal"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="font-serif text-2xl md:text-3xl font-normal text-white drop-shadow-lg">
@@ -88,7 +91,8 @@ export function HeroCarousel() {
               size="icon"
               className="lg:hidden text-white hover:bg-white/20"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Abrir menú"
+              aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -113,6 +117,7 @@ export function HeroCarousel() {
         </div>
       </nav>
 
+      {/* SEO: Carousel with proper alt text and priority loading for LCP */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -123,11 +128,12 @@ export function HeroCarousel() {
         >
           <Image
             src={slide.image || "/placeholder.svg"}
-            alt={slide.title}
+            alt={`${slide.title} - ${slide.subtitle}`}
             fill
             className="object-cover"
             priority={index === 0}
             sizes="100vw"
+            quality={90}
           />
 
           <div className="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -148,12 +154,13 @@ export function HeroCarousel() {
         </div>
       ))}
 
+      {/* SEO: Accessible navigation buttons */}
       <Button
         variant="ghost"
         size="icon"
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white"
         onClick={goToPrevious}
-        aria-label="Anterior"
+        aria-label="Slide anterior"
       >
         <ChevronLeft className="h-8 w-8" />
       </Button>
@@ -162,13 +169,18 @@ export function HeroCarousel() {
         size="icon"
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white"
         onClick={goToNext}
-        aria-label="Siguiente"
+        aria-label="Slide siguiente"
       >
         <ChevronRight className="h-8 w-8" />
       </Button>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
-        {slides.map((_, index) => (
+      {/* SEO: Carousel indicators with proper labels */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3"
+        role="tablist"
+        aria-label="Slides del carrusel"
+      >
+        {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
@@ -176,7 +188,9 @@ export function HeroCarousel() {
               "w-3 h-3 rounded-full transition-all duration-300",
               index === currentSlide ? "bg-white w-8" : "bg-white/50 hover:bg-white/75",
             )}
-            aria-label={`Ir a slide ${index + 1}`}
+            role="tab"
+            aria-label={`Ir a ${slide.title}`}
+            aria-selected={index === currentSlide}
           />
         ))}
       </div>

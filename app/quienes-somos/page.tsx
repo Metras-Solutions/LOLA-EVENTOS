@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Quiénes Somos - Lola",
   description:
     "Somos dos chefs y comunicadoras digitales con más de 20 años de experiencia en gastronomía, eventos y marketing digital.",
+  openGraph: {
+    title: "Quiénes Somos - Lola",
+    description:
+      "Chefs y comunicadoras digitales con más de 20 años de experiencia en gastronomía, eventos y marketing digital.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/quienes-somos",
+  },
 }
 
 export default function QuienesSomosPage() {
@@ -55,11 +64,12 @@ export default function QuienesSomosPage() {
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pasi%C3%B3n%20por%20la%20gastronom%C3%ADa%20y%20la%20comunicaci%C3%B3n-hrtf8mVYZQj35bMPiAqPTUQwS5Gnih.png"
-                alt="Equipo Studio Lola"
+                src="/images/team-quienes-somos.png"
+                alt="Equipo de chefs y comunicadoras de Studio Lola trabajando en la cocina"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
           </div>
@@ -68,7 +78,7 @@ export default function QuienesSomosPage() {
             <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
               <CardContent className="pt-6 text-center space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                  <Heart className="w-8 h-8 text-primary" />
+                  <Heart className="w-8 h-8 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="font-serif text-xl font-normal uppercase text-primary">Pasión</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -80,7 +90,7 @@ export default function QuienesSomosPage() {
             <Card className="border-2 border-accent/20 hover:border-accent/40 transition-all hover:shadow-lg">
               <CardContent className="pt-6 text-center space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto">
-                  <Users className="w-8 h-8 text-accent" />
+                  <Users className="w-8 h-8 text-accent" aria-hidden="true" />
                 </div>
                 <h3 className="font-serif text-xl font-normal uppercase text-primary">Conexión</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -92,7 +102,7 @@ export default function QuienesSomosPage() {
             <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
               <CardContent className="pt-6 text-center space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                  <Lightbulb className="w-8 h-8 text-primary" />
+                  <Lightbulb className="w-8 h-8 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="font-serif text-xl font-normal uppercase text-primary">Innovación</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -106,10 +116,11 @@ export default function QuienesSomosPage() {
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl order-2 md:order-1">
               <Image
                 src="/hero/lola-kitchen-products.png"
-                alt="Productos Studio Lola"
+                alt="Productos gastronómicos de Studio Lola"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
             <div className="space-y-6 order-1 md:order-2">
@@ -163,7 +174,7 @@ export default function QuienesSomosPage() {
               <div className="grid md:grid-cols-2 gap-6 pt-4">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-primary" />
+                    <Award className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1 uppercase">20+ años de experiencia</h4>
@@ -172,7 +183,7 @@ export default function QuienesSomosPage() {
                 </div>
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-6 h-6 text-accent" />
+                    <Sparkles className="w-6 h-6 text-accent" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1 uppercase">Experiencias memorables</h4>

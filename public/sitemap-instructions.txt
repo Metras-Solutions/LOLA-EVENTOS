@@ -1,0 +1,7 @@
+# Instrucciones para Generar Sitemap
+
+## Después del primer build:
+
+1. Ejecuta el comando:
+   ```bash
+   npx next-sitemap
