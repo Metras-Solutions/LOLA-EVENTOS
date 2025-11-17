@@ -7,6 +7,7 @@ import { WhatsAppChatWidget } from "@/components/whatsapp-chat-widget"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import Script from "next/script";
 import GAAnalytics from "@/components/ga-analytics"
+import { Suspense } from "react";
 
 const montserratHeading = Montserrat({
   subsets: ["latin"],
@@ -112,7 +113,9 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
-        <GAAnalytics />
+        <Suspense fallback={null}>
+          <GAAnalytics />
+        </Suspense>
         <Footer />
         <WhatsAppChatWidget />
         {isProd && GA_ID && (

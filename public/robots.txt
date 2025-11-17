@@ -1,10 +1,9 @@
-# SEO: Robots.txt configuration
+# *
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://lola-eventos.vercel.app/sitemap.xml
+# Host
+Host: https://lola-eventos.vercel.app
 
-# Disallow admin or private paths if any
-# User-agent: *
-# Disallow: /admin/
+# Sitemaps
+Sitemap: https://lola-eventos.vercel.app/sitemap.xml

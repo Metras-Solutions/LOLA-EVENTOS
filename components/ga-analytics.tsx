@@ -1,4 +1,4 @@
-// app/ga-analytics.tsx
+// components/ga-analytics.tsx
 "use client";
 
 import { useEffect } from "react";
@@ -10,7 +10,8 @@ export default function GAAnalytics() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "");
+    const params = searchParams?.toString();
+    const url = pathname + (params ? `?${params}` : "");
     pageview(url);
   }, [pathname, searchParams]);
 
