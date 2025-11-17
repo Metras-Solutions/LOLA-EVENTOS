@@ -5,6 +5,8 @@ import "./globals.css"
 import { Footer } from "@/components/footer"
 import { WhatsAppChatWidget } from "@/components/whatsapp-chat-widget"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import Script from "next/script";
+import GAAnalytics from "@/components/ga-analytics"
 
 const montserratHeading = Montserrat({
   subsets: ["latin"],
@@ -19,6 +21,9 @@ const montserratBody = Montserrat({
   variable: "--font-body",
   display: "swap",
 })
+
+const isProd = process.env.NODE_ENV === "production";
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lola-eventos.vercel.app"),
@@ -104,9 +109,40 @@ export default function RootLayout({
     <html lang="es" className={`${montserratHeading.variable} ${montserratBody.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         <ScrollToTop />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}
+        </main>
+        <GAAnalytics />
         <Footer />
         <WhatsAppChatWidget />
+        {isProd && GA_ID && (
+          <>
+            {/* Carga gtag.js */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+
+            {/* Init + Consent Mode + desactivar send_page_view automático */}
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                // Consent Mode básico (ajusta según tu banner de cookies)
+                gtag('consent', 'default', {
+                  'ad_user_data': 'denied',
+                  'ad_personalization': 'denied',
+                  'ad_storage': 'denied',
+                  'analytics_storage': 'granted'
+                });
+
+                gtag('config', '${GA_ID}', { send_page_view: false });
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   )

@@ -50,7 +50,7 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
-
+      console.log("[v0] Contact form response:", response)
       if (response.ok) {
         setSubmitStatus("success")
         form.reset()
@@ -197,7 +197,7 @@ export function ContactForm() {
           type="submit"
           size="lg"
           disabled={isSubmitting}
-          className="w-full md:w-auto bg-brand-600 hover:bg-brand-700 rounded-xl"
+          className="w-full border-2 border-primary md:w-auto bg-primary-600 hover:bg-primary-700 rounded-xl text-primary hover:bg-primary hover:text-white"
         >
           {isSubmitting ? (
             <>
